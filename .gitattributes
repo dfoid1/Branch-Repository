@@ -1,2 +1,37 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+#include <stdio.h>
+
+#define m1 50000
+#define m2 10000
+#define m3 5000
+#define m4 1000
+#define m5 500
+#define m6 100
+
+void m(int a){
+    int a1, a2, a3, a4, a5, a6;
+    a1 = a / m1;
+    a -= m1 * a1;
+    a2 = a / m2;
+    a -= m2 * a2;
+    a3 = a / m3;
+    a -= m3 * a3;
+    a4 = a / m4;
+    a -= m4 * a4;
+    a5 = a / m5;
+    a -= m5 * a5;
+    a6 = a / m6;
+
+    printf("오만원 지폐 : %d장\n", a1);
+    printf("일만원 지폐 : %d장\n", a2);
+    printf("오천원 지폐 : %d장\n", a3);
+    printf("일천원 지폐 : %d장\n", a4);
+    printf("오백원 동전 : %d개\n", a5);
+    printf("일백원 동전 : %d개\n", a6);
+}
+int main(void) {
+    int a;
+    printf(">> ");
+    scanf("%d", &a); getchar();
+    m(a);
+    return 0;
+}
